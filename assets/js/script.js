@@ -1,14 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Website Loaded Successfully!");
-
-    document.getElementById('search-btn').addEventListener('click', function() {
-        let searchTerm = document.getElementById('search-input').value.trim();
-        if (searchTerm) {
-            alert("Searching for: " + searchTerm);
-            // Redirect to search results page (optional)
-            // window.location.href = `search.html?query=${searchTerm}`;
-        }
-    });
+   
     
     // ☰ Mobile Menu Toggle
     function toggleMenu() {
@@ -284,5 +276,15 @@ document.getElementById("newsletterForm").addEventListener("submit", function(ev
     } else {
         message.textContent = "Please enter a valid email!";
         message.style.color = "red";
+    }
+});
+
+
+document.getElementById('search-btn').addEventListener('click', function() {
+    let searchTerm = document.getElementById('search-input').value.trim();
+    if (searchTerm) {
+        alert("Searching for: " + searchTerm);
+        // Redirect to search results page (optional)
+        // window.location.href = `search.html?query=${searchTerm}`;
     }
 });
