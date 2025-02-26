@@ -1,0 +1,118 @@
+/* Ensure full visibility on all devices */
+body {
+    background: #b9a03d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Checkout Container */
+.checkout-container {
+    background: linear-gradient(to left, gold, silver);
+    padding: 15px;
+    max-width: 420px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: visible; /* Ensures buttons are not hidden */
+    padding-bottom: 20px; /* Space for buttons */
+}
+
+/* Ensure items don't push the container */
+#checkout-items {
+    list-style: none;
+    padding: 0;
+    max-height: 120px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Prevent title from being cut off */
+h2 {
+    margin-top: 5px;
+    font-size: 22px;
+    color: black;
+}
+
+/* Labels for better spacing */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+}
+
+/* Input & Select Fields */
+input, select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Fix Pay Now button */
+button {
+    background: gold;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    display: block; /* Ensure it's always visible */
+    width: 100%; /* Full width */
+}
+
+button:hover {
+    background: silver;
+}
+
+/* Back to Cart Button */
+.back-to-cart {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-cart:hover {
+    background-color: silver;
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 480px) {
+    .checkout-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}

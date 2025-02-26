@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Sister Efia Boutique</title>
+    <link rel="stylesheet" href="assets/css/collection.css">
+    <link rel="shortcut icon" href="assets/images/log3.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/log3.png" alt="Sister Efia Boutique">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html" class="active">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <div class="cart-container" onclick="openCart()">
+                    <span id="cart-count">0</span> 🛒
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="🔎 Search Collections...">
+    </div>
+
+    <!-- Categories -->
+    <section class="collections-container">
+        <h1>Our Collections</h1>
+
+        <div class="filter-buttons">
+            <button onclick="filterCategory('all')">All Wares</button>
+            <button onclick="filterCategory('muslim')">Muslim Wares</button>
+            <button onclick="filterCategory('christian')">Christian Wares</button>
+            <button onclick="filterCategory('packaging')">Packaging</button>
+        </div>
+
+        <div class="collection-items">
+            <!-- Muslim Wares -->
+            <div class="product muslim">
+                <img src="assets/images/muslim1.jpg" alt="Islamic Attire">
+                <h3>Elegant Islamic Attire</h3>
+                <p class="price">$50.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product muslim">
+                <img src="assets/images/muslim2 - Copy.jpg" alt="Hijab Collection">
+                <h3>Hijab Collection</h3>
+                <p class="price">$30.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <!-- Christian Wares -->
+            <div class="product christian">
+                <img src="assets/images/christian1.jpg" alt="Christian Attire">
+                <h3>Classic Christian Dress</h3>
+                <p class="price">$60.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product christian">
+                <img src="assets/images/christian2.jpg" alt="Church Outfit">
+                <h3>Church Outfit</h3>
+                <p class="price">$70.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <!-- Packaging -->
+            <div class="product packaging">
+                <img src="assets/images/muslim3.jpg" alt="Luxury Packaging">
+                <h3>Luxury Packaging Box</h3>
+                <p class="price">$15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product packaging">
+                <img src="assets/images/muslim4.jpg" alt="Gift Packaging">
+                <h3>Gift Packaging Set</h3>
+                <p class="price">$20.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <span class="close" id="close-cart">&times;</span>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <div id="custom-alert" class="custom-alert">
+        <div class="alert-content">
+            <span class="close-alert">&times;</span>
+            <p id="alert-message"></p>
+        </div>
+    </div>
+    
+    <!-- Corrected JavaScript File -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

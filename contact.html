@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sister Efia Boutique</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="shortcut icon" href="assets/images/log3.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sister Efia <span>Classic Boutique</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="cart-container" onclick="openCart()">
+                <span id="cart-count">0</span> 🛒
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <h1>Get in Touch</h1>
+        <p>If you have any inquiries, feel free to contact us.</p>
+
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Our Contact Details</h2>
+                <p><strong>Address:</strong> 123 Fashion Street, Accra, Ghana</p>
+                <p><strong>Email:</strong> support@sisterefiaboutique.com</p>
+                <p><strong>Phone:</strong> +233 50 123 4567</p>
+
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="/assets/images/facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="assets/images/instagram.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="assets/images/whatsapp.jpg" alt="whatsapp"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/search?q=central+region+ghana&oq=central+region+gha&gs_lcrp=EgZjaHJvbWUqBwgBECEYjwIyBggAEEUYOTIHCAEQIRiPAjIHCAIQIRiPAtIBCTI0MjQ3ajBqMagCALACAA&sourceid=chrome&ie=UTF-8" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sister Efia Boutique. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

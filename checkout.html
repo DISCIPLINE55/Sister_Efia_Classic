@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="/assets/css/checkout.css">
+    
+    <!-- PayPal SDK (Replace YOUR_CLIENT_ID with actual one) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <div id="message-box" class="message"></div>
+
+        <h2>Checkout</h2>
+
+        <!-- Scrollable Checkout Items -->
+        <ul id="checkout-items"></ul>
+        <p>Total: $<span id="checkout-total">0.00</span></p>
+
+        <form id="checkout-form">
+            <!-- User Details -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+            
+            <!-- Location Selection -->
+            <label for="location">Select Location:</label>
+            <select id="location">
+                <option value="accra">Accra, Ghana</option>
+                <option value="kumasi">Kumasi, Ghana</option>
+                <option value="lagos">Lagos, Nigeria</option>
+                <option value="nairobi">Nairobi, Kenya</option>
+            </select>
+
+            <!-- Delivery Method Selection -->
+            <label for="delivery-method">Delivery Method:</label>
+            <select id="delivery-method">
+                <option value="doorstep">Doorstep Delivery</option>
+                <option value="express">Express (1-2 days)</option>
+                <option value="standard">Standard (3-5 days)</option>
+            </select>
+        
+            <!-- Payment Method -->
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method">
+                <option value="momo">MTN MoMo</option>
+                <option value="paypal">PayPal</option>
+                <option value="stripe">Stripe</option>
+            </select>
+
+            <button type="submit">Pay Now</button>
+        </form>
+        
+        <!-- Back to Cart Button -->
+        <a href="index.html" class="back-to-cart">← Back to Cart</a>
+        
+        <!-- PayPal Button -->
+        <div id="paypal-button-container"></div>
+    </div>
+
+    <script src="/assets/js/checkout.js"></script>
+
+</body>
+</html>

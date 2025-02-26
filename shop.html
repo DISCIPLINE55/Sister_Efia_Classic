@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Sister Efia Boutique</title>
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="shortcut icon" href="assets/images/log3.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Sister Efia <span>Classic Boutique</span></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="cart-container" onclick="openCart()">
+                    <span id="cart-count">0</span> 🛒
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="shop-container">
+        <h1>Our Collections</h1>
+        <div class="products">
+            <div class="product">
+                <img src="assets/images/product1.jpg" alt="Elegant Dress">
+                <h3>Elegant Dress</h3>
+                <p class="price">$45.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="assets/images/product2.jpg" alt="Luxury Handbag">
+                <h3>Luxury Handbag</h3>
+                <p class="price">$120.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/pro1.jpg" alt="Luxury Handbag">
+                <h3>Luxury Handbag</h3>
+                <p class="price">$120.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/pro2.jpg" alt="Luxury Handbag">
+                <h3>Luxury Handbag</h3>
+                <p class="price">$120.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <!-- Add more products here -->
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <button id="close-cart" onclick="closeCart()">Close</button>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
