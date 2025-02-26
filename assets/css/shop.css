@@ -11,11 +11,23 @@ body {
     color: #333;
 }
 
-/* Header & Navigation */
+/* Fixed Navigation */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #000;
     padding: 15px 5%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Ensure body content doesn’t overlap the navbar */
+body {
+    padding-top: 70px; /* Adjust this if needed */
+}
+
 
 nav {
     display: flex;
@@ -93,6 +105,31 @@ nav {
     font-size: 24px;
     color: white;
     cursor: pointer;
+}
+
+/* 🔹 Navbar Responsiveness */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: gold;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 15px;
+    }
 }
 
 /* Shop Section */

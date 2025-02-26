@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,36 +6,41 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #f8f9fa;
-    color: #333;
-    padding-top: 80px; /* Prevents content from hiding under fixed navbar */
-}
-
-/* Fixed Navigation Bar */
-.navbar {
+/* Body Styling */
+/* Fixed Navigation */
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: #c9a660;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure body content doesn’t overlap the navbar */
+body {
+    padding-top: 70px; /* Adjust this based on navbar height */
+}
+
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background: linear-gradient(to right, gold, silver);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    width: 90%;
+    margin: auto;
 }
-
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: bold;
-    color: rgb(5, 5, 3);
+    color: rgb(253, 253, 22);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background: linear-gradient(to right, rgb(16, 16, 15), silver);
+    background: linear-gradient(to right, rgba(19, 18, 17, 0.808), silver);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,142 +54,160 @@ body {
 }
 
 .logo img {
-    width: 120px;
+    width: 70px;
+    border-radius: 25%;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0 15px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links .active {
-    color: #333;
-    border-bottom: 2px solid #fff;
+.nav-links a:hover,
+.nav-links .active {
+    color: #502d16;
 }
 
-.cart-container {
-    background: #fff;
-    padding: 8px 15px;
-    border-radius: 20px;
+/* Hamburger Menu */
+.hamburger {
+    font-size: 2rem;
+    color: #fff;
+    display: none;
     cursor: pointer;
-    font-weight: bold;
+}
+
+/* Cart Icon */
+.cart-container {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 /* Contact Section */
 .contact-container {
     text-align: center;
-    padding: 80px 10%;
+    padding: 50px 15px;
 }
 
 .contact-container h1 {
-    font-size: 36px;
-    color: #b29569;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: #502d16;
+    margin-bottom: 10px;
 }
 
 .contact-container p {
-    font-size: 18px;
-    color: #666;
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
 }
 
+/* Contact Content */
 .contact-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
 /* Contact Form */
 .contact-form {
     background: #fff;
     padding: 25px;
+    width: 40%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 400px;
 }
 
 .contact-form h2 {
-    margin-bottom: 15px;
-    color: #b29569;
+    margin-bottom: 20px;
+    color: #502d16;
 }
 
-.contact-form label {
-    font-weight: bold;
-    display: block;
-    margin: 10px 0 5px;
-}
-
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 .contact-form button {
-    margin-top: 15px;
-    padding: 12px;
     width: 100%;
-    background: #b29569;
-    color: #fff;
+    padding: 10px;
+    background: #c9a660;
+    color: white;
     border: none;
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .contact-form button:hover {
-    background: #7a5d3b;
+    background: #502d16;
 }
 
 /* Contact Info */
 .contact-info {
-    max-width: 400px;
-    text-align: left;
+    width: 40%;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .contact-info h2 {
-    color: #b29569;
+    margin-bottom: 20px;
+    color: #502d16;
 }
 
 .contact-info p {
-    margin: 10px 0;
-    font-size: 18px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .social-icons {
-    display: flex;
-    gap: 15px;
     margin-top: 15px;
 }
 
-.social-icons img {
-    width: 30px;
-    transition: 0.3s;
+.social-icons a img {
+    width: 40px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
 }
 
-.social-icons img:hover {
+.social-icons a img:hover {
     transform: scale(1.1);
 }
 
 /* Map Section */
 .map-section {
-    margin-top: 50px;
     text-align: center;
+    padding: 40px 0;
+}
+
+.map-section h2 {
+    color: #502d16;
+    margin-bottom: 15px;
 }
 
 .map-section iframe {
-    width: 100%;
+    width: 80%;
     height: 350px;
     border-radius: 10px;
 }
@@ -192,7 +215,56 @@ body {
 /* Footer */
 footer {
     text-align: center;
-    background: silver;
+    padding: 20px;
+    background: #502d16;
     color: #fff;
-    padding: 15px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #c9a660;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 90%;
+    }
+
+    .map-section iframe {
+        width: 90%;
+    }
 }

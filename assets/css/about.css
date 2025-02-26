@@ -1,4 +1,4 @@
-/* General Styling */
+/* 🌟 General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,34 +7,36 @@
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
-    padding-top: 80px; /* Prevent content from hiding under fixed navbar */
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+    padding-top: 80px; /* Push content below the fixed navbar */
 }
 
-/* Fixed Navigation Bar */
+/* 🌟 Fixed Navigation Bar */
 .navbar {
-    position: fixed; /* Keeps the navbar fixed at the top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: linear-gradient(to right, gold, silver);
+    color: #222;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(to right, gold, silver);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensures navbar stays above other elements */
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: bold;
-    color: rgb(5, 5, 3);
+    color: rgb(253, 253, 22);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background: linear-gradient(to right, rgb(16, 16, 15), silver);
+    background: linear-gradient(to left, rgba(54, 54, 35, 0.808), silver);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -52,6 +54,7 @@ body {
     border-radius: 25%;
 }
 
+/* 🌟 Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -64,142 +67,169 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 18px;
+    color: black;
     font-weight: bold;
-    transition: 0.3s ease-in-out;
-}
-
-.nav-links a:hover, .nav-links .active {
-    color: #333;
-    border-bottom: 2px solid #fff;
-}
-
-.cart-container {
-    background: #fff;
     padding: 8px 15px;
-    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+/* 🛒 Cart Icon */
+.cart-container {
+    background: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
 }
 
-/* About Section */
+.cart-container:hover {
+    background: gold;
+    color: black;
+}
+
+/* 🍔 Hamburger Menu (Mobile) */
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔹 Navbar Responsiveness */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: gold;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 15px;
+    }
+}
+
+
+/* 🎭 About Us Section */
 .about-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    padding: 100px 10%; /* Increased padding to account for fixed navbar */
-    background: url('../images/bg.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .about-image img {
-    width: 450px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about-content {
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
 }
 
 .about-content h1 {
-    font-size: 36px;
-    color: goldenrod;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
 }
 
 .about-content p {
-    font-size: 18px;
+    margin-bottom: 15px;
     color: #555;
-    line-height: 1.8;
 }
 
 .highlight {
-    color: #d89c00;
+    color: gold;
     font-weight: bold;
 }
 
+/* 🛍️ Shop Now Button */
 .shop-now-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: gold;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    background: black;
+    color: white;
     text-decoration: none;
-    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: bold;
 }
 
 .shop-now-btn:hover {
-    background: silver;
+    background: gold;
+    color: black;
 }
 
-/* Team Section */
+/* 👥 Team Section */
 .team-section {
     text-align: center;
-    padding: 60px;
-    background: #fff;
+    padding: 60px 20px;
+    background: white;
 }
 
 .team-section h2 {
-    font-size: 30px;
-    color: goldenrod;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
 }
 
 .team-members {
     display: flex;
-    justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .team-card {
-    background: #f1f1f1;
-    padding: 25px;
+    background: white;
+    padding: 20px;
     border-radius: 10px;
-    width: 260px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
+    width: 250px;
 }
 
 .team-card img {
-    width: 100%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 15px;
-    border: 4px solid silver;
-    height: 80%;
+    margin-bottom: 10px;
 }
 
 .team-card h3 {
-    font-size: 22px;
-    color: #333;
+    color: black;
+    margin-bottom: 5px;
 }
 
-.team-card p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Footer */
+/* 📌 Footer */
 footer {
     text-align: center;
-    background: silver;
-    color: #fff;
-    padding: 15px;
-    font-size: 16px;
+    padding: 20px;
+    background: black;
+    color: white;
 }

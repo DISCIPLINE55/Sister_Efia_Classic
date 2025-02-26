@@ -11,16 +11,14 @@
 
     <header>
         <nav>
-            <div class="logo">
-                <img src="assets/images/log3.png" alt="Sister Efia Boutique">
-            </div>
+            <div class="logo">Sister Efia <span>Classic Boutique</span></div>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="collections.html" class="active">Collections</a></li>
+                <li><a href="collection.html">Collections</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <div class="cart-container" onclick="openCart()">
                     <span id="cart-count">0</span> 🛒
                 </div>
@@ -28,7 +26,7 @@
         </nav>
     </header>
 
-    <!-- Search Bar -->
+            <!-- Search Bar -->
     <div class="search-container">
         <input type="text" id="search-bar" placeholder="🔎 Search Collections...">
     </div>
@@ -47,7 +45,7 @@
         <div class="collection-items">
             <!-- Muslim Wares -->
             <div class="product muslim">
-                <img src="assets/images/muslim1.jpg" alt="Islamic Attire">
+                <img src="assets/images/muslim1.jpg" alt="Islamic Attire" loading="lazy" width="300" height="300">
                 <h3>Elegant Islamic Attire</h3>
                 <p class="price">$50.00</p>
                 <button class="add-to-cart">Add to Cart</button>
@@ -55,7 +53,7 @@
             </div>
 
             <div class="product muslim">
-                <img src="assets/images/muslim2 - Copy.jpg" alt="Hijab Collection">
+                <img src="assets/images/muslim2 - Copy.jpg" alt="Hijab Collection" loading="lazy" width="300" height="300">
                 <h3>Hijab Collection</h3>
                 <p class="price">$30.00</p>
                 <button class="add-to-cart">Add to Cart</button>
@@ -64,7 +62,7 @@
 
             <!-- Christian Wares -->
             <div class="product christian">
-                <img src="assets/images/christian1.jpg" alt="Christian Attire">
+                <img src="assets/images/christian1.jpg" alt="Christian Attire" loading="lazy" width="300" height="300">
                 <h3>Classic Christian Dress</h3>
                 <p class="price">$60.00</p>
                 <button class="add-to-cart">Add to Cart</button>
@@ -72,7 +70,7 @@
             </div>
 
             <div class="product christian">
-                <img src="assets/images/christian2.jpg" alt="Church Outfit">
+                <img src="assets/images/christian2.jpg" alt="Church Outfit" loading="lazy" width="300" height="300">
                 <h3>Church Outfit</h3>
                 <p class="price">$70.00</p>
                 <button class="add-to-cart">Add to Cart</button>
@@ -81,7 +79,7 @@
 
             <!-- Packaging -->
             <div class="product packaging">
-                <img src="assets/images/muslim3.jpg" alt="Luxury Packaging">
+                <img src="assets/images/muslim3.jpg" alt="Luxury Packaging" loading="lazy" width="300" height="300">
                 <h3>Luxury Packaging Box</h3>
                 <p class="price">$15.00</p>
                 <button class="add-to-cart">Add to Cart</button>
@@ -89,7 +87,7 @@
             </div>
 
             <div class="product packaging">
-                <img src="assets/images/muslim4.jpg" alt="Gift Packaging">
+                <img src="assets/images/muslim4.jpg" alt="Gift Packaging" loading="lazy" width="300" height="300">
                 <h3>Gift Packaging Set</h3>
                 <p class="price">$20.00</p>
                 <button class="add-to-cart">Add to Cart</button>
@@ -98,26 +96,21 @@
         </div>
     </section>
 
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="cart-modal">
-        <div class="cart-content">
-            
-            <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="cart-total">0.00</span></p>
-            <span class="close" id="close-cart">&times;</span>
-            <button id="checkout-btn">Checkout</button>
-        </div>
-    </div>
-
     <div id="custom-alert" class="custom-alert">
         <div class="alert-content">
             <span class="close-alert">&times;</span>
             <p id="alert-message"></p>
         </div>
     </div>
-    
-    <!-- Corrected JavaScript File -->
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <button id="close-cart" onclick="closeCart()">Close</button>
+    </div>
+
     <script src="assets/js/script.js"></script>
 
 </body>

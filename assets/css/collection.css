@@ -1,47 +1,44 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* General Styles */
+/* 🌟 General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-header {
-    background: black;
-    padding: 15px 5%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+
 body {
     background-color: #f8f8f8;
     color: #333;
+    padding-top: 80px; /* Adjust for fixed navbar */
 }
 
-/* Header */
-header {
-    background: black;
-    padding: 15px 5%;
-}
-
+/* 🌟 Fixed Navigation Bar */
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, gold, silver);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+/* 🏷️ Logo */
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: bold;
-    color: rgb(5, 5, 3);
+    color: rgb(253, 253, 22);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background: linear-gradient(to right, rgb(16, 16, 15), silver);
+    background: linear-gradient(to left, rgba(54, 54, 35, 0.808), silver);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,101 +56,123 @@ nav {
     border-radius: 25%;
 }
 
+/* 🌟 Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    display: inline;
 }
 
 .nav-links a {
     text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: white;
+    color: black;
+}
+
+/* 🛒 Cart Icon */
+.cart-container {
+    background: black;
     color: white;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.nav-links a:hover, .nav-links .active {
-    color: gold;
+.cart-container:hover {
+    background: gold;
+    color: black;
 }
 
-/* Search Bar */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔹 Navbar Responsiveness */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: gold;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 15px;
+    }
+}
+
+
+/* 🔎 Search Bar */
 .search-container {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 #search-bar {
     width: 80%;
-    max-width: 400px;
+    max-width: 600px;
     padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
     border: 2px solid gold;
-    background: #fff;
-    outline: none;
-    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-#search-bar:focus {
-    border-color: silver;
-}
-
-/* Collections */
-/* Fixing the Navbar */
-header {
-    background: black;
-    padding: 15px 5%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Prevent content from hiding under navbar */
-body {
-    padding-top: 70px; /* Adjust based on header height */
-}
-
-/* Fixing the Collections Section */
+/* 🌟 Collections Section */
 .collections-container {
     text-align: center;
-    padding: 10px; /* Reduce padding */
-    margin-top: 10px; /* Add slight spacing */
+    padding: 40px 20px;
 }
 
 .collections-container h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; /* Reduce font size slightly */
+    font-size: 30px;
     color: black;
-    margin-bottom: 5px; /* Reduce margin */
+    margin-bottom: 20px;
 }
 
-.collections-container h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: black;
-    margin-bottom: 10px;
-}
-
-/* Filter Buttons */
+/* 🎯 Filter Buttons */
 .filter-buttons {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .filter-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
     background: black;
     color: white;
-    border: 2px solid gold;
-    padding: 12px 18px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
     transition: 0.3s;
-    font-weight: bold;
 }
 
 .filter-buttons button:hover {
@@ -161,59 +180,62 @@ body {
     color: black;
 }
 
-/* Product Grid */
+/* 🛍️ Collection Items Grid */
 .collection-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
     justify-content: center;
 }
 
+/* 📦 Product Cards */
 .product {
     background: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
 .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .product img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
     border-radius: 10px;
-    height: 80%;
 }
 
 .product h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    font-weight: bold;
+    color: black;
+    margin-top: 10px;
 }
 
 .price {
-    font-size: 16px;
     font-weight: bold;
     color: gold;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-/* Buttons */
+/* 🛒 Buttons */
 .add-to-cart, .buy-btn {
-    background: black;
-    color: white;
-    border: 2px solid gold;
-    padding: 10px 15px;
-    font-size: 14px;
-    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
     font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.add-to-cart {
+    background: black;
+    color: white;
 }
 
 .add-to-cart:hover {
@@ -231,162 +253,71 @@ body {
     color: white;
 }
 
-/* Cart Icon */
-.cart-container {
-    position: relative;
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    margin-right: 20px;
-}
-
-#cart-count {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background: red;
-    color: white;
-    border-radius: 50%;
-    padding: 4px 8px;
-    font-size: 14px;
-}
-
-/* Cart Modal Styling */
+/* 🛒 Cart Modal */
 .cart-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    max-width: 90%;
-    background: white;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    z-index: 1000;
     display: none;
-}
-
-.cart-modal h2 {
-    margin-bottom: 15px;
-    font-size: 22px;
-    color: #333;
-    font-weight: bold;
-}
-
-.cart-modal ul {
-    list-style: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-.cart-modal ul::-webkit-scrollbar {
-    width: 6px;
-}
-
-.cart-modal ul::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-.cart-modal li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cart-modal li:last-child {
-    border-bottom: none;
-}
-
-.cart-modal p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.cart-modal span {
-    color: #e44d26;
-}
-
-#checkout-btn, #close-cart {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-#checkout-btn {
-    background: #28a745;
-    color: white;
-}
-
-#checkout-btn:hover {
-    background: #218838;
-}
-
-#close-cart {
-    background: #dc3545;
-    color: white;
-}
-
-#close-cart:hover {
-    background: #c82333;
-}
-
-/* Background Blur Effect */
-.cart-modal.active {
-    display: block;
-}
-
-body.cart-open::before {
-    content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Alert Box */
+.cart-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 5px 0;
+}
+
+#checkout-btn {
+    background: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* ❌ Close Button */
+.close, .close-alert {
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* 🔔 Custom Alert */
 .custom-alert {
     display: none;
     position: fixed;
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
+    background: white;
     padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-.alert-content {
-    position: relative;
-}
-
-.close-alert {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 20px;
-    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

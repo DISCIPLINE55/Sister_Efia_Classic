@@ -12,17 +12,19 @@
     <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
-            <div class="logo">Sister Efia <span>Classic Boutique</span></div>
+            <div class="logo">Sister Efia <span>Classic Boutique</span> </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="collection.html">Collections</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+                <div class="cart-container" onclick="openCart()">
+                    <span id="cart-count">0</span> 🛒
+                </div>
             </ul>
-            <div class="cart-container" onclick="openCart()">
-                <span id="cart-count">0</span> 🛒
-            </div>
+            
         </nav>
     </header>
 

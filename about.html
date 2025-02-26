@@ -12,16 +12,19 @@
     <header>
         <nav class="navbar">
             <div class="logo">Sister Efia <span>Classic Boutique</span></div>
+            <div class="hamburger">
+                ☰
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="collection.html">Collections</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <div class="cart-container" onclick="openCart()">
+                    <span id="cart-count">0</span> 🛒
+                </div>
             </ul>
-            <div class="cart-container" onclick="openCart()">
-                <span id="cart-count">0</span> 🛒
-            </div>
         </nav>
     </header>
 
@@ -56,17 +59,17 @@
         <h2>Meet Our Team</h2>
         <div class="team-members">
             <div class="team-card">
-                <img src="assets/images/CEO.jpg" alt="Founder">
+                <img src="assets/images/CEO.jpg" alt="Founder" loading="lazy" width="300" height="300">
                 <h3>Sister Efia</h3>
                 <p>Founder & CEO</p>
             </div>
             <div class="team-card">
-                <img src="assets/images/designer.jpg" alt="Lead Designer">
+                <img src="assets/images/designer.jpg" alt="Lead Designer" loading="lazy" width="300" height="300">
                 <h3>Discipline</h3>
                 <p>Lead Designer</p>
             </div>
             <div class="team-card">
-                <img src="assets/images/muslim3.jpg" alt="Marketing Head">
+                <img src="assets/images/muslim3.jpg" alt="Marketing Head" loading="lazy" width="300" height="300">
                 <h3>Sarah Ofori</h3>
                 <p>Marketing Head</p>
             </div>
@@ -78,7 +81,7 @@
         <p>&copy; 2025 Sister Efia Boutique. All Rights Reserved.</p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 
 </body>
 </html>

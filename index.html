@@ -3,130 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Boutique</title>
+    <meta name="description" content="Sister Efia Classic Boutique - Luxury, elegance, and class in every outfit. Explore our premium collection today.">
+    <meta name="keywords" content="luxury fashion, boutique, designer clothing, accessories, premium fashion">
+    <meta name="author" content="Sister Efia Classic Boutique">
+    <meta property="og:title" content="Sister Efia Classic Boutique">
+    <meta property="og:description" content="Luxury, elegance, and class in every outfit. Explore our premium collection today.">
+    <meta property="og:image" content="assets/images/logo.webp">
+    <meta property="og:url" content="https://sisterefiaboutique.com">
+    <meta name="robots" content="index, follow">
+
+    <title>Sister Efia Classic Boutique</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="/assets/images/log3.png" type="image/x-icon">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Sister Efia Classic Boutique",
+        "image": "https://sisterefiaboutique.com/assets/images/logo.webp",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Accra, Ghana",
+            "addressCountry": "GH"
+        },
+        "url": "https://sisterefiaboutique.com",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+233 123 456 789",
+            "contactType": "customer service"
+        }
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main Navigation">
             <div class="logo">Sister Efia <span>Classic Boutique</span></div>
-
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for products..." aria-label="Search">
+                <button id="search-btn">🔍</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
+    
+            <div class="hamburger" onclick="toggleMenu()" role="button" aria-label="Toggle menu">☰</div>
+            
+            <ul class="nav-links" role="menu">
+                <li role="menuitem"><a href="#" class="active">Home</a></li>
+                <li role="menuitem"><a href="shop.html">Shop</a></li>
+                <li role="menuitem"><a href="collection.html">Collections</a></li>
+                <li role="menuitem"><a href="about.html">About</a></li>
+                <li role="menuitem"><a href="contact.html">Contact</a></li>
+                <div class="cart-container" aria-label="Shopping cart">
+                    <span id="cart-count">0</span> 🛒
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Luxury Fashion, Redefined</h1>
+    <p>Discover premium collections designed for elegance.</p>
+    <a href="shop.html" class="shop-btn">Shop Now</a>
+</section>
+
+<!-- Featured Categories -->
+<section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+        <div class="category">
+            <img src="assets/images/bag1.jpg" alt="Luxury Bags" loading="lazy" width="300" height="300">
+            <h3>Bags</h3>
+        </div>
+        <div class="category">
+            <img src="assets/images/official .jpg" alt="Premium Wares" loading="lazy" width="300" height="300">
+            <h3>official Wares</h3>
+        </div>
+        <div class="category">
+            <img src="assets/images/shoe1.jpg" alt="Designer Shoes" loading="lazy" width="300" height="300">
+            <h3>Shoes</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="assets/images/product1.jpg" alt="Luxury Handbag">
+            <h3>Luxury Handbag</h3>
+            <p class="price">$299.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="assets/images/product2.jpg" alt="Elegant Watch">
+            <h3>Elegant Watch</h3>
+            <p class="price">$499.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="assets/images/product3.jpg" alt="Designer Shoes">
+            <h3>Designer Shoes</h3>
+            <p class="price">$349.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div> 
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+        <p>"Absolutely love the quality! The handbag I ordered is stunning!"</p>
+        <h4>- Aisha M.</h4>
+    </div>
+    <div class="testimonial">
+        <p>"Fast delivery and great customer service. Will shop again!"</p>
+        <h4>- Kwame B.</h4>
+    </div>
+</section>
+
+
+<!-- Newsletter Subscription -->
+<section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for exclusive deals and latest trends.</p>
+    <form id="newsletterForm">
+        <input type="email" id="emailInput" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <p id="message" style="margin-top: 10px; color: white; font-weight: bold;"></p>
+</section>
+
+
+<!-- Instagram Feed -->
+<section class="instagram-feed">
+    <h2>Follow Us on Instagram</h2>
+    <div class="insta-grid">
+        <img src="assets/images/insta1.jpg" alt="Customer wearing boutique dress">
+        <img src="assets/images/insta2.jpg" alt="Luxury handbag showcase">
+        <img src="assets/images/insta3.jpg" alt="Exclusive boutique collection">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>Sister Efia Classic Boutique</h3>
+            <p>Luxury, elegance, and class in every outfit. Explore our premium collection today.</p>
+        </div>
+        
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="collection.html">Collections</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <div class="cart-container">
-                    <span id="cart-count">0</span>
-                    🛒
-                </div>
-            </ul> 
-        </nav>
-    
-        <!-- Cart Modal -->
-        <div id="cart-modal" class="cart-modal">
-            <h2>Shopping Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="cart-total">0.00</span></p>
-            <button id="checkout-btn">Checkout</button>
-            <button id="close-cart">Close</button>
+            </ul>
         </div>
-    </header>
-    
-    <section class="hero">
-        <h1>Luxury Fashion, Redefined</h1>
-        <p>Discover premium collections designed for elegance.</p>
-        <a href="#" class="shop-btn">Shop Now</a>
-        
-    </section>
 
-    <section class="featured-products">
-        <h2>Featured Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="assets/images/product1.jpg" alt="Product 1" loading="lazy">
-                <h3>Luxury Handbag</h3>
-                <p class="price">$299.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product">
-                <img src="assets/images/product2.jpg" alt="Product 2" loading="lazy">
-                <h3>Elegant Watch</h3>
-                <p class="price">$499.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product">
-                <img src="assets/images/product3.jpg" alt="Product 3" loading="lazy">
-                <h3>Designer Shoes</h3>
-                <p class="price">$349.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@sisterefiaboutique.com</p>
+            <p>Phone: +233 123 456 789</p>
+            <p>Location: Accra, Ghana</p>
+        </div>
 
-            <div class="product">
-                <img src="assets/images/product4.jpg" alt="Product 3" loading="lazy">
-                <h3>Designer Shoes</h3>
-                <p class="price">$349.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="buy-btn">Buy Now</button>
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="assets/images/facebook.jpg" alt="Facebook"></a>
+                <a href="#"><img src="assets/images/instagram.jpg" alt="Instagram"></a>
+                <a href="#"><img src="assets/images/whatsapp.jpg" alt="WhatsApp"></a>
             </div>
-        </div> 
-    </section>
-    <div id="custom-alert" class="custom-alert">
-        <div class="alert-content">
-            <span class="close-alert">&times;</span>
-            <p id="alert-message"></p>
         </div>
     </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h3>Sister Efia Classic Boutique</h3>
-                <p>Luxury, elegance, and class in every outfit. Explore our premium collection today.</p>
-            </div>
-            
-            <div class="footer-section links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="collection.html">Collections</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Sister Efia Classic Boutique. All Rights Reserved.</p>
+    </div>
+</footer>
 
-            <div class="footer-section contact">
-                <h3>Contact Us</h3>
-                <p>Email: support@sisterefiaboutique.com</p>
-                <p>Phone: +233 123 456 789</p>
-                <p>Location: Accra, Ghana</p>
-            </div>
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">▲</button>
 
-            <div class="footer-section social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="assets/images/facebook.jpg" alt="Facebook"></a>
-                    <a href="#"><img src="assets/images/instagram.jpg" alt="Instagram"></a>
-                    <a href="#"><img src="assets/images/whatsapp.jpg" alt="whatsapp"></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Sister Efia Classic Boutique. All Rights Reserved.</p>
-        </div>
-    </footer>
+<!-- Scripts -->
+<script src="assets/js/script.js" defer></script>
 
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
